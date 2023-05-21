@@ -11,22 +11,24 @@ import java.util.List;
 public class StudentServices {
     @Autowired
     private StudentRepository repository;
-
+    //add student data
     public void addStudent(Student c){
         repository.save(c);
     }
 
+    //get all student data
     public List<Student> getAllStudent(){
         List<Student>studentList=repository.findAll();
         return studentList;
     }
 
+    //update student data
     public void updateStudent(Student c){
         repository.save(c);
 
     }
 
-
+   //delete data by id
     public void deleteStudent(int id){
         repository.deleteById(id);
     }
